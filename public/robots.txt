@@ -1,0 +1,16 @@
+# Allow all search engines to crawl all content by default
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
+
+# Specific rules for Googlebot
+User-agent: Googlebot
+Disallow: /test/
+
+# Sitemap Location
+Sitemap: https://www.nginev.com/sitemap.xml
+
+# Block all bots from crawling a specific folder (optional)
+User-agent: *
+Disallow: /uploads/

@@ -1,115 +1,123 @@
-import Image from "next/image";
-import localFont from "next/font/local";
+import React from "react";
+import dynamic from "next/dynamic";
+import Layout from "./layout";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+// Dynamically import other components for performance optimization
+const Navbar = dynamic(() => import("../components/navbar"));
+const HeroSection = dynamic(() => import("../components/heroSection"));
+const InfoSecContent = dynamic(() => import("../components/infoSecContent"));
+const CardSection = dynamic(() => import("../components/cardSection"));
+const Contact = dynamic(() => import("../components/contact"));
+const Footer = dynamic(() => import("../components/footer"));
 
-export default function Home() {
+// Define reusable data for SEO and component structure
+const softwareSolutionsData = [
+  {
+    title: "Innovative Custom Solutions",
+    description:
+      "At NGINEV, we tailor our technology solutions to fit your unique business needs. Whether it's software development, mobile apps, or IT infrastructure, we provide innovative solutions that enhance your efficiency and productivity.",
+  },
+  {
+    title: "End-to-End Support",
+    description:
+      "From ideation to implementation, NGINEV offers full-cycle support. We help you with everything from design to deployment, ensuring that your business receives seamless and ongoing technical support.",
+  },
+  {
+    title: "Scalability & Future-Proofing",
+    description:
+      "Our solutions are built to grow with your business. NGINEV ensures that your technology is scalable, adaptable, and ready to evolve with changing market demands, keeping you ahead of the curve.",
+  },
+  {
+    title: "Proven Track Record",
+    description:
+      "With a solid history of successful projects, NGINEV has helped numerous businesses streamline their operations and achieve sustainable growth. Our commitment to excellence ensures that we deliver results you can count on.",
+  },
+];
+
+// Define section data for the website layout
+const sections = [
+  {
+    mainImages: ["/images/software/webpage.png"],
+    title: "Tailored Software Solutions for a Digital World",
+    description:
+      "In today’s fast-paced digital landscape, having the right software solutions is crucial for success. At NGINEV, we specialize in developing custom software that aligns with your business goals. Embrace the digital transformation with us and watch your ideas come to life!",
+    buttonText: "Explore software solutions",
+    buttonLink: "/software",
+    imageOnLeft: false,
+  },
+  {
+    mainImages: ["/images/hardware/N.png"],
+    title: "Cutting-Edge Hardware Solutions for Every Need",
+    description:
+      "The backbone of any successful tech initiative is reliable hardware. Let us help you build a solid foundation for your operations with our state-of-the-art hardware solutions tailored to your specific requirements.",
+    buttonText: "Explore hardware solutions",
+    buttonLink: "/hardware",
+    imageOnLeft: true,
+  },
+  {
+    mainImages: ["/images/marketing/Dark-Marketing.jpg"],
+    title: "Comprehensive Marketing Solutions to Amplify Your Brand",
+    description:
+      "From digital campaigns to traditional advertising, NGINEV specializes in all forms of marketing to help you connect with your audience. Drive growth and engagement with strategies tailored to your brand's unique needs.",
+    buttonText: "Explore marketing strategies",
+    buttonLink: "/marketing",
+    imageOnLeft: false,
+  },
+  {
+    mainImages: ["/images/printing/print.png"],
+    title: "High-Quality Printing Services for Every Need",
+    description:
+      "NGINEV provides a full spectrum of high-quality printing services, from business cards and branded bags to custom tapes and everything in between. With top-tier materials and meticulous attention to detail, our printing solutions enhance your brand's visibility and make a lasting impression.",
+    buttonText: "Discover printing services",
+    buttonLink: "/printing",
+    imageOnLeft: true,
+  },
+];
+
+// Define contact paragraph for Call-to-Action (CTA)
+const contactParagraph =
+  "Your success is our priority. We're here to help bring your ideas to life. Have a question or ready to get started? Reach out, and let’s make something amazing happen together!";
+
+// Define HeroSection props
+const heroSectionProps = {
+  title: "NGINEV: Innovation Crafted for You",
+  description:
+    "At NGINEV, we turn technology into tools for your growth. Our custom software, hardware, design, and marketing solutions simplify and elevate your work. With us, you’re not just adopting tech—you’re gaining a partner dedicated to your success. Let’s bring your vision to life together.",
+  videoSources: [
+    { src: "/videos/world-1920.mp4", media: "(min-width: 1200px)" },
+    { src: "/videos/world-720.mp4", media: "(min-width: 768px)" },
+    { src: "/videos/world-565.mp4", media: "(max-width: 767px)" },
+  ],
+  imageSrc: "/images/world pic.png",
+};
+
+const Home = () => {
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
+    <Layout
+      title="NGINEV | Software, Hardware, Marketing & Printing Solutions"
+      description="Explore NGINEV's tailored solutions in software, hardware, marketing, and printing. Empower your business with innovative services."
+      keywords="software solutions, hardware services, digital marketing, printing services, business technology, NGINEV"
+      image="/images/nginev.png"
+      url="https://www.nginev.com"
     >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              pages/index.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      {/* Page Components */}
+      <Navbar />
+      <HeroSection {...heroSectionProps} />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      {/* Main Content Section */}
+      <InfoSecContent sections={sections} />
+
+      {/* Why Choose NGINEV Section */}
+      <CardSection
+        sectionTitle="Why Choose NGINEV as Your Business Partner?"
+        sectionDescription="Discover the compelling reasons why businesses trust NGINEV for their technology solutions. We bring innovation, reliability, and expertise to every project, ensuring your business stays ahead in a competitive market."
+        cardsData={softwareSolutionsData}
+      />
+
+      {/* Contact Section */}
+      <Contact paragraph={contactParagraph} />
+    </Layout>
   );
-}
+};
+
+export default Home;

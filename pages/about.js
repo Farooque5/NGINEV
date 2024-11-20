@@ -1,11 +1,11 @@
 // pages/about.js
 import Layout from "./layout"; // Adjust the import path if necessary
 import Nav from "../components/navbar"; // Import the Nav component if you have a navigation bar
-import Footer from "../components/footer";
 import CardSection from "../components/cardSection";
 import InfoSecContent from "../components/infoSecContent";
 import ImageCard from "../components/imageCards";
 import Head from "next/head";
+import ContactButton from "@/components/contactButton";
 
 const AboutSectionData = [
   {
@@ -27,7 +27,26 @@ const AboutSectionData = [
 
 export default function AboutPage() {
   return (
-    <Layout>
+    <Layout
+      title="About NGINEV | Empowering Businesses with Innovation"
+      description="Learn about NGINEV's mission to provide cutting-edge software, hardware, marketing, and printing solutions. Discover our commitment to innovation."
+      keywords="about NGINEV, business innovation, software services, hardware support, marketing solutions, printing services"
+      image="/images/nginev.png"
+      url="https://www.nginev.com/about"
+    >
+      <Head>
+        {/* SEO Meta Tags */}
+        <meta name="robots" content="index, follow" />
+        <meta name="description" content="Learn about NGINEV's mission to empower businesses with innovative technology solutions in software, hardware, marketing, and printing services." />
+        <meta property="og:title" content="About NGINEV | Empowering Businesses with Innovation" />
+        <meta property="og:description" content="NGINEV offers cutting-edge software, hardware, marketing, and printing solutions to help businesses grow and innovate." />
+        <meta property="og:image" content="/images/nginev.png" />
+        <meta property="og:url" content="https://www.nginev.com/about" />
+        <meta name="keywords" content="about NGINEV, business innovation, technology solutions, software services, hardware support, marketing, printing" />
+      </Head>
+
+      {/* Page Content */}
+      <Nav aria-label="Primary navigation" /> {/* Improved accessibility with ARIA label */}
 
       {/* Hero Section */}
       <section
@@ -62,8 +81,7 @@ export default function AboutPage() {
         />
       </section>
 
-      {/* Footer */}
-      <Footer />
+      <ContactButton buttonText="Contact Us Now!" buttonLink="/contactus" />
     </Layout>
   );
 }

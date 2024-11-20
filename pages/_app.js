@@ -61,7 +61,7 @@ export default function App({ Component, pageProps }) {
         />
         <meta name="twitter:image" content="/images/nginev.png" />
 
-        {/* Structured Data for SEO */}
+        {/* Structured Data for Website */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -76,6 +76,30 @@ export default function App({ Component, pageProps }) {
                 "@type": "SearchAction",
                 "target": "https://www.nginev.com/search?q={search_term_string}",
                 "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
+
+        {/* Structured Data for Organization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "NGINEV",
+              "url": "https://nginev.com",
+              "logo": "https://nginev.com/logo.png",
+              "sameAs": [
+                "https://facebook.com/nginev",
+                "https://twitter.com/nginev",
+                "https://linkedin.com/company/nginev",
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-1234567890",
+                "contactType": "Customer Service",
               },
             }),
           }}

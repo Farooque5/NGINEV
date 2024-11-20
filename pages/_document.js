@@ -1,3 +1,5 @@
+// _document.js
+
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -67,9 +69,8 @@ export default function Document() {
           }}
         />
       </Head>
-      
-      {/* Main Content and Accessibility */}
-      <body className="antialiased bg-gray-50">
+
+      <body className="antialiased bg-black">
         <Main />
         <NextScript />
       </body>

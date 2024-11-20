@@ -1,88 +1,67 @@
+// layout.js
+
 import Head from 'next/head';
 import Nav from '../components/navbar';
 import Footer from '../components/footer';
 
-export default function Layout({ 
-    children, 
-    title = 'NGINEV - From Tech to Trends', 
-    description = 'NGINEV: Your trusted partner for custom software, hardware, marketing, and printing solutions. Empowering businesses worldwide.', 
-    keywords = 'software solutions, hardware solutions, marketing strategies, printing services, NGINEV, business solutions', 
-    image = '/images/nginev.png', // Default fallback image
-    url = 'https://www.nginev.com', // Default website URL
+export default function Layout({
+  children,
+  title = 'NGINEV - From Tech to Trends',
+  description = 'NGINEV: Your trusted partner for custom software, hardware, marketing, and printing solutions. Empowering businesses worldwide.',
+  keywords = 'software solutions, hardware solutions, marketing strategies, printing services, NGINEV, business solutions',
+  image = '/images/nginev.png', // Default fallback image
+  url = 'https://www.nginev.com', // Default website URL
+  author = 'NGINEV',
+  robots = 'index, follow',
+  twitterCard = 'summary_large_image',
+  openGraphType = 'website',
+  openGraphTitle = 'NGINEV - From Tech to Trends',
+  openGraphDescription = 'NGINEV offers innovative software, hardware, marketing, and printing solutions to businesses globally.',
+  openGraphImage = '/images/nginev.png',
+  openGraphUrl = 'https://www.nginev.com',
+  additionalMeta = [],
+  canonicalUrl = 'https://www.nginev.com',
 }) {
-    const siteTitle = `${title}`;
-    const canonicalUrl = url; // Canonical link to avoid duplicate content issues
+  return (
+    <>
+      <Head>
+        {/* Dynamic Title */}
+        <title>{title}</title>
 
-    return (
-        <>
-            <Head>
-                {/* Dynamic Title */}
-                <title>{siteTitle}</title>
+        {/* Meta Tags for SEO */}
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <meta name="author" content={author} />
+        <meta name="robots" content={robots} />
 
-                {/* Favicon */}
-                <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-                
-                {/* Meta Tags for SEO */}
-                <meta charSet="UTF-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="description" content={description} />
-                <meta name="keywords" content={keywords} />
-                <meta name="author" content="NGINEV" />
-                <meta name="robots" content="index, follow" />
-                
-                {/* Canonical Link */}
-                <link rel="canonical" href={canonicalUrl} />
+        {/* Canonical Link */}
+        <link rel="canonical" href={canonicalUrl} />
 
-                {/* Open Graph Meta Tags for Social Sharing */}
-                <meta property="og:title" content={siteTitle} />
-                <meta property="og:description" content={description} />
-                <meta property="og:image" content={image} />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content={canonicalUrl} />
+        {/* Open Graph Meta Tags for Social Sharing */}
+        <meta property="og:title" content={openGraphTitle} />
+        <meta property="og:description" content={openGraphDescription} />
+        <meta property="og:image" content={openGraphImage} />
+        <meta property="og:type" content={openGraphType} />
+        <meta property="og:url" content={openGraphUrl} />
 
-                {/* Twitter Card Meta Tags */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content={siteTitle} />
-                <meta name="twitter:description" content={description} />
-                <meta name="twitter:image" content={image} />
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content={twitterCard} />
+        <meta name="twitter:title" content={openGraphTitle} />
+        <meta name="twitter:description" content={openGraphDescription} />
+        <meta name="twitter:image" content={openGraphImage} />
 
-                {/* Structured Data for SEO */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "WebSite",
-                            "url": canonicalUrl,
-                            "name": "NGINEV",
-                            "description": description,
-                            "potentialAction": {
-                                "@type": "SearchAction",
-                                "target": `${canonicalUrl}/search?q={search_term_string}`,
-                                "query-input": "required name=search_term_string"
-                            }
-                        })
-                    }}
-                />
+        {/* Additional Meta Tags */}
+        {additionalMeta && additionalMeta.map((tag, index) => (
+          <meta key={index} name={tag.name} content={tag.content} />
+        ))}
+      </Head>
 
-                {/* Language Attribute */}
-                <html lang="en" />
-            </Head>
-
-            {/* Navigation */}
-            <header>
-                <Nav />
-            </header>
-
-            {/* Main Content Area */}
-            <main role="main">
-                {children}
-            </main>
-
-            {/* Footer */}
-            <footer role="contentinfo">
-                <Footer />
-            </footer>
-        </>
-    );
+      {/* Page content */}
+      <div>
+        <Nav />
+        <main>{children}</main>
+        <Footer />
+      </div>
+    </>
+  );
 }

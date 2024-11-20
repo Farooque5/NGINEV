@@ -2,7 +2,6 @@
 import Head from "next/head";
 import Layout from "./layout";
 import Nav from "../components/navbar";
-import Footer from "../components/footer";
 import CardSection from "../components/cardSection";
 import InfoSecContent from "../components/infoSecContent";
 import ContactButton from "../components/contactButton";
@@ -62,30 +61,37 @@ const sections = [
 ];
 
 const heroSectionProps = {
-    title: "Elevate Your Brand with NGINEV’s Marketing Solutions",
-    description:
-      "At NGINEV, we specialize in transforming brands through cutting-edge marketing strategies. From digital campaigns to traditional advertising, our tailored solutions help businesses grow, engage their target audience, and drive long-term success. Let us take your marketing to the next level with results-driven strategies designed to make your brand stand out.</p>",
-    imageSrc: '/images/marketing/marketing-home.jpg',
-  };
+  title: "Boost Your Brand with NGINEV Marketing",
+  description:
+    "At NGINEV, we specialize in transforming brands through cutting-edge marketing strategies. From digital campaigns to traditional advertising, our tailored solutions help businesses grow, engage their target audience, and drive long-term success. Let us take your marketing to the next level with results-driven strategies designed to make your brand stand out.</p>",
+  imagePlaceholder: "/images/marketing/marketing home.jpg",
+};
 
 export default function Marketing() {
   return (
     <Layout
       title="Marketing Solutions | NGINEV"
-      description="Elevate your brand with NGINEV's digital marketing, SEO, social media management, and branding solutions tailored to your business."
-      keywords="digital marketing, SEO strategies, social media management, branding, online advertising, marketing services, business growth"
+      description="Boost your business with NGINEV's expert digital marketing, SEO, branding, and social media strategies tailored for growth and visibility."
+      keywords="digital marketing, SEO, branding, social media management, online advertising, business growth, marketing services, NGINEV"
       image="/images/nginev.png"
       url="https://www.nginev.com/marketing"
+      author="NGINEV"
+      robots="index, follow"
+      twitterCard="summary_large_image"
+      openGraphType="website"
+      openGraphTitle="Marketing Solutions | NGINEV"
+      openGraphDescription="Elevate your brand with NGINEV's cutting-edge digital marketing strategies, SEO expertise, and creative branding solutions."
+      openGraphImage="/images/nginev.png"
+      openGraphUrl="https://www.nginev.com/marketing"
+      additionalMeta={[
+        {
+          name: "keywords",
+          content:
+            "digital marketing, SEO strategies, branding, social media, advertising solutions, NGINEV marketing services",
+        },
+      ]}
+      canonicalUrl="https://www.nginev.com"
     >
-      <Head>
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.nginev.com/marketing" />
-        <meta property="og:title" content="Marketing Solutions | NGINEV" />
-        <meta property="og:description" content="Elevate your brand with NGINEV's marketing strategies" />
-        <meta property="og:image" content="/images/nginev.png" />
-        <meta property="og:url" content="https://www.nginev.com/marketing" />
-      </Head>
-
       {/* Navbar */}
       <Nav />
 
@@ -105,10 +111,7 @@ export default function Marketing() {
       </section>
 
       {/* Contact Button */}
-      <ContactButton buttonText="Contact Us Now!" buttonLink="/contactus" />
-
-      {/* Footer */}
-      <Footer />
+      <ContactButton buttonText="Contact Us Now!" buttonLink="/contact" />
     </Layout>
   );
 }

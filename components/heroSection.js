@@ -25,7 +25,7 @@ const HeroSection = ({
           alt="Background Placeholder"
           fill
           style={{ objectFit: "cover" }}
-          className="absolute top-0 left-0 z-0 opacity-70"
+          className="absolute top-0 left-0 z-0 opacity-80"
           priority
         />
       )}
@@ -52,7 +52,7 @@ const HeroSection = ({
       )}
 
       {/* Content Section */}
-      <div className="relative z-10 flex items-center justify-center bg-black bg-opacity-30 rounded-lg p-6 max-w-3xl mx-auto h-screen shadow-lg">
+      <div className="relative z-10 flex items-center justify-center bg-black bg-opacity-0 rounded-lg p-6 max-w-4xl mx-auto h-screen shadow-lg">
         <div className="text-center">
           <h1 className="text-white font-bold mb-4 text-3xl sm:text-4xl leading-tight">
             {title}

@@ -1,7 +1,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import Layout from "./layout";
-import Head from "next/head";
 
 // Dynamically import other components for performance optimization
 const Navbar = dynamic(() => import("../components/navbar"));
@@ -94,21 +93,28 @@ const heroSectionProps = {
 
 const Home = () => {
   return (
-    <Layout>
-      {/* Page Metadata */}
-      <Head>
-        <title>NGINEV | Home</title>
-        <meta
-          name="description"
-          content="Welcome to NGINEV, your go-to source for software, hardware, marketing, and printing solutions."
-        />
-        <meta
-          name="keywords"
-          content="NGINEV, business solutions, tech solutions, software, hardware, marketing"
-        />
-        <meta name="robots" content="index, follow" />
-      </Head>
-
+    <Layout
+      title="NGINEV | Home"
+      description="Welcome to NGINEV, your go-to source for software, hardware, marketing, and printing solutions."
+      keywords="NGINEV, business solutions, tech solutions, software, hardware, marketing, printing"
+      image="/images/nginev.png"
+      url="https://www.nginev.com"
+      author="NGINEV"
+      robots="index, follow"
+      twitterCard="summary_large_image"
+      openGraphType="website"
+      openGraphTitle="NGINEV | Home"
+      openGraphDescription="Discover NGINEV's innovative solutions in software, hardware, marketing, and printing services."
+      openGraphImage="/images/nginev.png"
+      openGraphUrl="https://www.nginev.com"
+      additionalMeta={[
+        {
+          name: "keywords",
+          content: "business solutions, tech services, software, hardware, marketing, printing, NGINEV",
+        },
+      ]}
+      canonicalUrl="https://www.nginev.com"
+    >
       {/* Page Components */}
       <Navbar />
       <HeroSection {...heroSectionProps} />
@@ -125,7 +131,6 @@ const Home = () => {
 
       {/* Contact Section */}
       <Contact paragraph={contactParagraph} />
-      
     </Layout>
   );
 };

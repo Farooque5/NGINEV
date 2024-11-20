@@ -31,7 +31,7 @@ const printingSolutionsData = [
 
 const sections = [
   {
-    mainImages: ["/images/printing/custom/second.jpg!sw800"],
+    mainImages: ["/images/printing/custom/first.jpg!sw800"],
     additionalImages: [
       "/images/printing/custom/tshirt front.png",
       "/images/printing/custom/tshirt back.png",
@@ -86,24 +86,37 @@ const sections = [
 ];
 
 const heroSectionProps = {
-    title: "Why Choose NGINEV for Your Printing Needs?",
-    description:
-      "NGINEV offers high-quality printing services tailored to your business needs, with fast turnaround times, premium materials, and customizable options to enhance your brand’s visibility and impact.",
-    imageSrc: '/images/printing/print home.jpg',
-  };
+  title: "Why Choose NGINEV for Your Printing Needs?",
+  description:
+    "NGINEV offers high-quality printing services tailored to your business needs, with fast turnaround times, premium materials, and customizable options to enhance your brand’s visibility and impact.",
+  imagePlaceholder: "/images/printing/print home.jpg",
+};
 
-export default function PrintingSolution() {
+export default function Printing() {
   return (
     <Layout
       title="Printing Services | NGINEV"
-      description="Explore NGINEV's high-quality printing services, including custom designs, packaging, labels, and promotional materials."
-      keywords="printing services, custom printing, packaging, labels, promotional materials, business branding, marketing prints"
+      description="Discover NGINEV's premium printing services, offering customized designs, packaging, labels, and promotional materials to enhance your brand presence."
+      keywords="printing services, custom printing, packaging design, labels printing, promotional materials, marketing prints, business branding"
       image="/images/nginev.png"
       url="https://www.nginev.com/printing"
+      author="NGINEV"
+      robots="index, follow"
+      twitterCard="summary_large_image"
+      openGraphType="website"
+      openGraphTitle="Printing Services | NGINEV"
+      openGraphDescription="Elevate your brand with NGINEV's high-quality printing solutions, from customized packaging and labels to creative promotional materials."
+      openGraphImage="/images/nginev.png"
+      openGraphUrl="https://www.nginev.com/printing"
+      additionalMeta={[
+        {
+          name: "keywords",
+          content:
+            "custom printing, business branding, packaging solutions, promotional prints, marketing materials, label printing, NGINEV services",
+        },
+      ]}
+      canonicalUrl="https://www.nginev.com"
     >
-      <Head>
-        <link rel="canonical" href="https://www.nginev.com/printing" />
-      </Head>
 
       {/* Hero Section */}
       <HeroSection {...heroSectionProps} />
@@ -121,7 +134,7 @@ export default function PrintingSolution() {
       </section>
 
       {/* Contact Button */}
-      <ContactButton buttonText="Contact Us Now!" buttonLink="/contactus" />
+      <ContactButton buttonText="Contact Us Now!" buttonLink="/contact" />
     </Layout>
   );
 }

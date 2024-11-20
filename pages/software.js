@@ -94,14 +94,15 @@ const sections = [
   },
 ];
 
+// Hero Section Content
 const heroSectionProps = {
-    title: "Software Solutions",
+    title: "Innovative Software Solutions for Every Business",
     description:
-      "Tailored software solutions for your business growth and success.",
-    imageSrc: '/images/software/software-code.avif',
+      "Unlock your business potential with NGINEV’s tailored software solutions. We create innovative, scalable, and efficient technologies to streamline your operations and drive success. From development to support, we’re here to ensure your digital journey is seamless and impactful.",
+    imagePlaceholder: '/images/software/software-code.avif',
   };
 
-export default function SoftwareSolution() {
+export default function Software() {
   return (
     <Layout
       title="Software Solutions | NGINEV"
@@ -109,6 +110,21 @@ export default function SoftwareSolution() {
       keywords="software, custom software, web development, NGINEV software solutions"
       image="/images/nginev.png"
       url="https://www.nginev.com/software"
+      author="NGINEV"
+      robots="index, follow"
+      twitterCard="summary_large_image"
+      openGraphType="website"
+      openGraphTitle="Software Solutions | NGINEV"
+      openGraphDescription="NGINEV offers innovative and scalable software solutions designed to meet your business needs and drive growth."
+      openGraphImage="/images/nginev.png"
+      openGraphUrl="https://www.nginev.com/software"
+      additionalMeta={[
+        {
+          name: "keywords",
+          content: "custom software, NGINEV, software solutions, web development, enterprise applications",
+        },
+      ]}
+      canonicalUrl="https://www.nginev.com"
     >
       {/* Navbar */}
       <Nav />
@@ -120,10 +136,13 @@ export default function SoftwareSolution() {
       <InfoSecContent sections={sections} />
 
       {/* Highlights Section */}
-      <CardSection data={softwareSolutionsData} />
+      <CardSection 
+      sectionTitle='Why Choose NGINEV for Software Solutions?'
+      sectionDescription='Experience the NGINEV advantage with our affordable, tailored, and comprehensive software solutions. From flexible payment options to 24/7 support, we ensure your business thrives with innovative and reliable technology.'
+      cardsData={softwareSolutionsData} />
 
       {/* contact button */}
-      <ContactButton buttonText="Contact Us Now!" buttonLink="/contactus" />
+      <ContactButton buttonText="Contact Us Now!" buttonLink="/contact" />
     </Layout>
   );
 }

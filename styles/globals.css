@@ -19,3 +19,51 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for WebKit browsers */
+.scrollbar-custom {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.5) transparent; /* Firefox */
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 6px;  /* Width for vertical scrollbar */
+  height: 6px; /* Height for horizontal scrollbar */
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px; /* Round the corners */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px; /* Rounded corners for thumb */
+  transition: background 0.3s;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Hide scrollbar buttons for WebKit */
+.scrollbar-custom::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+/* Custom scroll for Firefox */
+.scrollbar-custom {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
+}
+
+.scrollbar-custom:hover {
+  scrollbar-color: rgba(0, 0, 0, 0.8) transparent;
+}

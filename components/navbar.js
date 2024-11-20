@@ -58,7 +58,7 @@ const Nav = () => {
         {[
           { name: 'Home', path: '/' },
           { name: 'About', path: '/about' },
-          { name: 'Contact Us', path: '/contactus' },
+          { name: 'Contact Us', path: '/contact' },
         ].map((link) => (
           <li key={link.name}>
             <Link

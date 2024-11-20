@@ -22,27 +22,13 @@ const Footer = () => {
 
         {/* Middle Section: Navigation Links */}
         <nav aria-label="Footer Navigation" className="flex flex-wrap justify-center lg:justify-center space-x-5 text-sm mb-6 lg:mb-0">
-          <Link href="/">
-            <a className="hover:text-red-600 transition duration-300" aria-label="Go to Home">Home</a>
-          </Link>
-          <Link href="/about">
-            <a className="hover:text-red-600 transition duration-300" aria-label="Learn About Us">About</a>
-          </Link>
-          <Link href="/software">
-            <a className="hover:text-red-600 transition duration-300" aria-label="View Software Services">Software</a>
-          </Link>
-          <Link href="/hardware">
-            <a className="hover:text-red-600 transition duration-300" aria-label="View Hardware Services">Hardware</a>
-          </Link>
-          <Link href="/marketing">
-            <a className="hover:text-red-600 transition duration-300" aria-label="View Marketing Services">Marketing</a>
-          </Link>
-          <Link href="/printing">
-            <a className="hover:text-red-600 transition duration-300" aria-label="View Printing Services">Printing</a>
-          </Link>
-          <Link href="/contact">
-            <a className="hover:text-red-600 transition duration-300" aria-label="Contact Us">Contact Us</a>
-          </Link>
+          <Link href="/" aria-label="Go to Home" className="hover:text-red-600 transition duration-300">Home</Link>
+          <Link href="/about" aria-label="Learn About Us" className="hover:text-red-600 transition duration-300">About</Link>
+          <Link href="/software" aria-label="View Software Services" className="hover:text-red-600 transition duration-300">Software</Link>
+          <Link href="/hardware" aria-label="View Hardware Services" className="hover:text-red-600 transition duration-300">Hardware</Link>
+          <Link href="/marketing" aria-label="View Marketing Services" className="hover:text-red-600 transition duration-300">Marketing</Link>
+          <Link href="/printing" aria-label="View Printing Services" className="hover:text-red-600 transition duration-300">Printing</Link>
+          <Link href="/contact" aria-label="Contact Us" className="hover:text-red-600 transition duration-300">Contact Us</Link>
         </nav>
 
         {/* Right Section: Social Media Links and Contact Info */}

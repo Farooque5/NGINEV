@@ -77,20 +77,36 @@ const sections = [
 
 // Define HeroSection props
 const heroSectionProps = {
-    title: "NGINEV: Innovation Crafted for You",
-    description:
-      "At NGINEV, we turn technology into tools for your growth. Our custom software, hardware, design, and marketing solutions simplify and elevate your work. With us, you’re not just adopting tech—you’re gaining a partner dedicated to your success. Let’s bring your vision to life together.",
-    imageSrc: '/images/hardware/hardware-home.jpg',
-  };
+  title: "NGINEV: Innovation Crafted for You",
+  description:
+    "At NGINEV, we turn technology into tools for your growth. Our custom software, hardware, design, and marketing solutions simplify and elevate your work. With us, you’re not just adopting tech—you’re gaining a partner dedicated to your success. Let’s bring your vision to life together.",
+  imagePlaceholder: "/images/hardware/hardware-home.jpg",
+};
 
-export default function HardwareSolution() {
+export default function Hardware() {
   return (
     <Layout
       title="Hardware Solutions | NGINEV"
-      description="NGINEV offers cutting-edge hardware solutions, including IT infrastructure, custom devices, and ongoing technical support."
-      keywords="hardware solutions, IT infrastructure, custom hardware, tech support, enterprise hardware, technology devices"
+      description="Discover NGINEV's hardware solutions, from IT infrastructure to custom devices and technical support, tailored to empower your business."
+      keywords="hardware solutions, IT infrastructure, custom hardware, technical support, enterprise technology, NGINEV hardware services"
       image="/images/nginev.png"
       url="https://www.nginev.com/hardware"
+      author="NGINEV"
+      robots="index, follow"
+      twitterCard="summary_large_image"
+      openGraphType="website"
+      openGraphTitle="Hardware Solutions | NGINEV"
+      openGraphDescription="Explore NGINEV's advanced hardware solutions, including IT infrastructure and custom technology devices, for seamless business operations."
+      openGraphImage="/images/nginev.png"
+      openGraphUrl="https://www.nginev.com/hardware"
+      additionalMeta={[
+        {
+          name: "keywords",
+          content:
+            "hardware solutions, IT infrastructure, technology devices, custom hardware, enterprise support, NGINEV services",
+        },
+      ]}
+      canonicalUrl="https://www.nginev.com"
     >
       {/* Navbar */}
       <Nav />
@@ -109,8 +125,7 @@ export default function HardwareSolution() {
       />
 
       {/* Contact Button */}
-      <ContactButton buttonText="Contact Us Now!" buttonLink="/contactus" />
-
+      <ContactButton buttonText="Contact Us Now!" buttonLink="/contact" />
     </Layout>
   );
 }

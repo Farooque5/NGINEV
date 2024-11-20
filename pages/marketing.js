@@ -1,5 +1,4 @@
 // pages/marketing.js
-import Head from "next/head";
 import Layout from "./layout";
 import Nav from "../components/navbar";
 import CardSection from "../components/cardSection";

@@ -42,21 +42,21 @@ const Footer = () => {
                className="text-gray-300 hover:text-red-600 transition duration-300">
               <FaFacebookF size={18} />
             </a>
-            <a href="https://twitter.com/YourBusinessPage" 
+            <a href="https://twitter.com/NGINEV144376" 
                aria-label="Visit our Twitter" 
                target="_blank" 
                rel="noopener noreferrer" 
                className="text-gray-300 hover:text-red-600 transition duration-300">
               <FaTwitter size={18} />
             </a>
-            <a href="https://instagram.com/YourBusinessPage" 
+            <a href="https://instagram.com/f.nginev" 
                aria-label="Visit our Instagram" 
                target="_blank" 
                rel="noopener noreferrer" 
                className="text-gray-300 hover:text-red-600 transition duration-300">
               <FaInstagram size={18} />
             </a>
-            <a href="https://linkedin.com/YourBusinessPage" 
+            <a href="https://linkedin.com/company/nginev" 
                aria-label="Visit our LinkedIn" 
                target="_blank" 
                rel="noopener noreferrer" 

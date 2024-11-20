@@ -2,7 +2,6 @@
 import Layout from "./layout";
 import Nav from "../components/navbar";
 import CardSection from "../components/cardSection";
-import InfoSecContent from "../components/infoSecContent";
 import ContactButton from "@/components/contactButton";
 import HeroSection from "@/components/heroSection";
 

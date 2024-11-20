@@ -48,7 +48,7 @@ const sections = [
     description:
       "At NGINEV, we deliver end-to-end software solutions tailored to your business needs. From innovative startups to established enterprises, our solutions drive growth and digital transformation.",
     buttonText: 'Contact Now for Software Solutions',
-    buttonLink: '/contactus',
+    buttonLink: '/contact',
     imageOnLeft: true,
   },
   {
@@ -67,7 +67,7 @@ const sections = [
     description:
       "We specialize in building apps that cater to your unique needs. Whether you're starting from scratch or enhancing an existing app, we ensure they align with your business goals.",
     buttonText: 'Contact Us for App Solutions',
-    buttonLink: '/contactus',
+    buttonLink: '/contact',
     imageOnLeft: false,
   },
   {
@@ -89,7 +89,7 @@ const sections = [
     description:
       "Whether building your first website or scaling an established one, NGINEV ensures seamless performance and tailored designs for your business.",
     buttonText: 'Contact Us for Website Solutions',
-    buttonLink: '/contactus',
+    buttonLink: '/contact',
     imageOnLeft: true,
   },
 ];

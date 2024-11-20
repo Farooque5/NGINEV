@@ -1,5 +1,4 @@
 // pages/printingSolution.js
-import Head from "next/head";
 import Layout from "./layout";
 import CardSection from "../components/cardSection";
 import InfoSecContent from "../components/infoSecContent";
@@ -45,7 +44,7 @@ const sections = [
     description:
       "At NGINEV, we offer a wide range of custom printing solutions to bring your ideas to life. Whether you're looking for personalized business stationery, promotional materials, or custom merchandise, our high-quality printing ensures vibrant colors and sharp details. Let us help you make a lasting impression.",
     buttonText: "Get Custom Printing",
-    buttonLink: "/contactus",
+    buttonLink: "/contact",
     imageOnLeft: true,
   },
   {
@@ -61,7 +60,7 @@ const sections = [
     description:
       "From brochures and flyers to banners and posters, NGINEV offers professional printing services to elevate your business marketing. Our team ensures that every piece meets your exact specifications, helping you reach your audience effectively and drive results.",
     buttonText: "Order Marketing Prints",
-    buttonLink: "/contactus",
+    buttonLink: "/contact",
     imageOnLeft: false,
   },
   {
@@ -80,7 +79,7 @@ const sections = [
     description:
       "NGINEV provides custom packaging and label printing solutions designed to enhance your product’s presentation. Whether you need product labels, packaging for retail, or unique designs, we deliver packaging that stands out and aligns with your brand identity.",
     buttonText: "Explore Packaging Solutions",
-    buttonLink: "/contactus",
+    buttonLink: "/contact",
     imageOnLeft: true,
   },
 ];

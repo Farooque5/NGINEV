@@ -42,7 +42,7 @@ const sections = [
     description:
       "From powerful desktops and laptops to high-performance servers, we provide the ideal computing solutions for any business. Our networking products—routers, switches, and firewalls—ensure seamless connectivity and secure data flow across your organization.",
     buttonText: "Contact now for Computing & Networking",
-    buttonLink: "/contactus",
+    buttonLink: "/contact",
     imageOnLeft: true,
   },
   {
@@ -56,7 +56,7 @@ const sections = [
     description:
       "Safeguard your business with our advanced security hardware, including CCTV cameras, access control systems, and alarm systems. We also offer robust point-of-sale systems, including terminals, barcode scanners, and receipt printers for smooth transaction processes.",
     buttonText: "Contact us for Security & POS Solutions",
-    buttonLink: "/contactus",
+    buttonLink: "/contact",
     imageOnLeft: false,
   },
   {
@@ -70,7 +70,7 @@ const sections = [
     description:
       "Whether you need fast and reliable storage solutions or high-quality audio/visual setups, we’ve got you covered. From HDDs, SSDs, and NAS devices to home theater systems and conference equipment, we provide versatile solutions for all your needs.",
     buttonText: "Contact us for Storage & AV Solutions",
-    buttonLink: "/contactus",
+    buttonLink: "/contact",
     imageOnLeft: true,
   },
 ];

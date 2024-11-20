@@ -39,10 +39,10 @@ const Contact = ({ paragraph }) => {
             { icon: FaPhone, label: 'Phone', value: '+7970307692', link: 'tel:+7970307692', color: 'bg-red-600' },
             { icon: FaWhatsapp, label: 'WhatsApp', value: '+7970307692', link: 'https://wa.me/7970307692', color: 'bg-green-500' },
             { icon: FaEnvelope, label: 'Email', value: 'contact.nginev@gmail.com', link: 'mailto:contact.nginev@gmail.com', color: 'bg-blue-500' },
-            { icon: FaLinkedin, label: 'LinkedIn', value: 'linkedin.com/in/md-farooque-756', link: 'https://linkedin.com/in/md-farooque-756', color: 'bg-blue-700' },
+            { icon: FaLinkedin, label: 'LinkedIn', value: 'linkedin.com/nginev', link: 'https://www.linkedin.com/company/nginev', color: 'bg-blue-700' },
             { icon: FaFacebook, label: 'Facebook', value: 'facebook.com/yourbusinesspage', link: 'https://facebook.com/yourbusinesspage', color: 'bg-blue-600' },
-            { icon: FaTwitter, label: 'Twitter', value: 'twitter.com/yourbusinesspage', link: 'https://twitter.com/yourbusinesspage', color: 'bg-blue-400' },
-            { icon: FaInstagram, label: 'Instagram', value: 'instagram.com/yourbusinesspage', link: 'https://instagram.com/yourbusinesspage', color: 'bg-pink-500' }
+            { icon: FaTwitter, label: 'Twitter', value: 'x.com/NGINEV144376', link: 'https://x.com/NGINEV144376', color: 'bg-blue-400' },
+            { icon: FaInstagram, label: 'Instagram', value: 'instagram.com/f.nginev', link: 'https://instagram.com/f.nginev', color: 'bg-pink-500' }
           ].map(({ icon: Icon, label, value, link, color }, idx) => (
             <div key={idx} className="flex items-center space-x-4">
               <div className={`p-3 rounded-full text-white ${color}`} aria-hidden="true">

@@ -103,13 +103,7 @@ const heroSectionProps = {
 
 export default function SoftwareSolution() {
   return (
-    <Layout
-      title="Software Solutions | NGINEV"
-      description="Empower your business with NGINEV's cutting-edge software solutions tailored for growth."
-      keywords="software, custom software, web development, NGINEV software solutions"
-      image="/images/nginev.png"
-      url="https://www.nginev.com/software"
-    >
+    <Layout>
       {/* Navbar */}
       <Nav />
 

@@ -95,19 +95,6 @@ const heroSectionProps = {
 const Home = () => {
   return (
     <Layout>
-      {/* Page Metadata */}
-      <Head>
-        <title>NGINEV | Home</title>
-        <meta
-          name="description"
-          content="Welcome to NGINEV, your go-to source for software, hardware, marketing, and printing solutions."
-        />
-        <meta
-          name="keywords"
-          content="NGINEV, business solutions, tech solutions, software, hardware, marketing"
-        />
-        <meta name="robots" content="index, follow" />
-      </Head>
 
       {/* Page Components */}
       <Navbar />

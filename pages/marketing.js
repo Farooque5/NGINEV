@@ -70,21 +70,7 @@ const heroSectionProps = {
 
 export default function Marketing() {
   return (
-    <Layout
-      title="Marketing Solutions | NGINEV"
-      description="Elevate your brand with NGINEV's digital marketing, SEO, social media management, and branding solutions tailored to your business."
-      keywords="digital marketing, SEO strategies, social media management, branding, online advertising, marketing services, business growth"
-      image="/images/nginev.png"
-      url="https://www.nginev.com/marketing"
-    >
-      <Head>
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.nginev.com/marketing" />
-        <meta property="og:title" content="Marketing Solutions | NGINEV" />
-        <meta property="og:description" content="Elevate your brand with NGINEV's marketing strategies" />
-        <meta property="og:image" content="/images/nginev.png" />
-        <meta property="og:url" content="https://www.nginev.com/marketing" />
-      </Head>
+    <Layout>
 
       {/* Navbar */}
       <Nav />

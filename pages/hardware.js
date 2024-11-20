@@ -85,13 +85,7 @@ const heroSectionProps = {
 
 export default function HardwareSolution() {
   return (
-    <Layout
-      title="Hardware Solutions | NGINEV"
-      description="NGINEV offers cutting-edge hardware solutions, including IT infrastructure, custom devices, and ongoing technical support."
-      keywords="hardware solutions, IT infrastructure, custom hardware, tech support, enterprise hardware, technology devices"
-      image="/images/nginev.png"
-      url="https://www.nginev.com/hardware"
-    >
+    <Layout>
       {/* Navbar */}
       <Nav />
 

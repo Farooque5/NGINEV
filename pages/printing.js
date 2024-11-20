@@ -94,16 +94,7 @@ const heroSectionProps = {
 
 export default function PrintingSolution() {
   return (
-    <Layout
-      title="Printing Services | NGINEV"
-      description="Explore NGINEV's high-quality printing services, including custom designs, packaging, labels, and promotional materials."
-      keywords="printing services, custom printing, packaging, labels, promotional materials, business branding, marketing prints"
-      image="/images/nginev.png"
-      url="https://www.nginev.com/printing"
-    >
-      <Head>
-        <link rel="canonical" href="https://www.nginev.com/printing" />
-      </Head>
+    <Layout>
 
       {/* Hero Section */}
       <HeroSection {...heroSectionProps} />

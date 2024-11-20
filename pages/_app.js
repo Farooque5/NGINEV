@@ -5,7 +5,7 @@ import Head from "next/head";
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Head>
+<Head>
         {/* Global Metadata */}
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,7 +42,7 @@ export default function App({ Component, pageProps }) {
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="icon" href="/favicon.ico" />
 
-        {/* Open Graph Meta Tags for Social Sharing */}
+        {/* Open Graph Meta Tags */}
         <meta property="og:title" content="NGINEV | From Tech to Trends" />
         <meta
           property="og:description"
@@ -52,7 +52,7 @@ export default function App({ Component, pageProps }) {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nginev.com" />
 
-        {/* Twitter Card Meta Tags */}
+        {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="NGINEV | From Tech to Trends" />
         <meta
@@ -61,7 +61,7 @@ export default function App({ Component, pageProps }) {
         />
         <meta name="twitter:image" content="/images/nginev.png" />
 
-        {/* Structured Data for Website */}
+        {/* Structured Data for SEO */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -80,34 +80,6 @@ export default function App({ Component, pageProps }) {
             }),
           }}
         />
-
-        {/* Structured Data for Organization */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "NGINEV",
-              "url": "https://nginev.com",
-              "logo": "https://nginev.com/logo.png",
-              "sameAs": [
-                "https://facebook.com/nginev",
-                "https://twitter.com/nginev",
-                "https://linkedin.com/company/nginev",
-              ],
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+91-1234567890",
-                "contactType": "Customer Service",
-              },
-            }),
-          }}
-        />
-
-        {/* Preconnect for External Resources (Improves Performance) */}
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link rel="preconnect" href="https://www.google.com" />
       </Head>
 
       {/* Main App Component */}

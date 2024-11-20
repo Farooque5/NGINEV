@@ -1,6 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import Layout from "./layout";
+import Head from "next/head";
 
 // Dynamically import other components for performance optimization
 const Navbar = dynamic(() => import("../components/navbar"));
@@ -93,13 +94,21 @@ const heroSectionProps = {
 
 const Home = () => {
   return (
-    <Layout
-      title="NGINEV | Software, Hardware, Marketing & Printing Solutions"
-      description="Explore NGINEV's tailored solutions in software, hardware, marketing, and printing. Empower your business with innovative services."
-      keywords="software solutions, hardware services, digital marketing, printing services, business technology, NGINEV"
-      image="/images/nginev.png"
-      url="https://www.nginev.com"
-    >
+    <Layout>
+      {/* Page Metadata */}
+      <Head>
+        <title>NGINEV | Home</title>
+        <meta
+          name="description"
+          content="Welcome to NGINEV, your go-to source for software, hardware, marketing, and printing solutions."
+        />
+        <meta
+          name="keywords"
+          content="NGINEV, business solutions, tech solutions, software, hardware, marketing"
+        />
+        <meta name="robots" content="index, follow" />
+      </Head>
+
       {/* Page Components */}
       <Navbar />
       <HeroSection {...heroSectionProps} />
@@ -116,6 +125,7 @@ const Home = () => {
 
       {/* Contact Section */}
       <Contact paragraph={contactParagraph} />
+      <Footer />
     </Layout>
   );
 };

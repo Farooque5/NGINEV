@@ -33,6 +33,7 @@ export default function Layout({
         <meta name="keywords" content={keywords} />
         <meta name="author" content={author} />
         <meta name="robots" content={robots} />
+        <link rel="icon" href="/favicon.ico" />
 
         {/* Canonical Link */}
         <link rel="canonical" href={canonicalUrl} />

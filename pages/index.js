@@ -94,9 +94,9 @@ const heroSectionProps = {
 const Home = () => {
   return (
     <Layout
-      title="NGINEV | Home"
-      description="Welcome to NGINEV, your go-to source for software, hardware, marketing, and printing solutions."
-      keywords="NGINEV, business solutions, tech solutions, software, hardware, marketing, printing"
+      title="NGINEV"
+      description="NGINEV empowers businesses with innovative software, hardware, marketing, and printing solutions. Transform ideas into success with our expertise."
+      keywords="NGINEV, Business Solutions, Tech Solutions, Software Development, Custom Software, Hardware Services, IT Hardware Solutions, Marketing Services, Digital Marketing, Printing Solutions, Professional Printing, SEO Services, Branding and Advertising, Cloud Solutions, AI Software, Computer Networking, Business Support, Tech Services Dhanbad, Printing Services Dhanbad, Digital Marketing Dhanbad,Software and Hardware Solutions Dhanbad"
       image="/images/nginev.png"
       url="https://www.nginev.com"
       author="NGINEV"

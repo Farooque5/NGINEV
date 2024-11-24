@@ -1,9 +1,9 @@
 module.exports = {
   siteUrl: 'https://www.nginev.com', // Your website URL
   generateRobotsTxt: true, // Generate robots.txt
-  changefreq: 'daily', // Change frequency for all pages (can be customized per page if needed)
-  priority: 0.7, // Default priority for all pages (can be customized per page)
-  
+  changefreq: 'daily', // Change frequency for all pages
+  priority: 0.7, // Default priority for all pages
+
   // Exclude specific paths from the sitemap
   exclude: ['/admin', '/login', '/signup'], // Example: paths you don't want to include
 
@@ -15,43 +15,37 @@ module.exports = {
     policies: [
       {
         userAgent: '*', // Apply to all user agents (crawlers)
-        disallow: ['/private', '/restricted'], // Example: disallow crawling certain paths
+        disallow: ['/private', '/restricted'], // Disallow crawling certain paths
       },
       {
         userAgent: 'Googlebot',
-        allow: ['/'], // Example: allow Googlebot to crawl everything
+        allow: ['/'], // Allow Googlebot to crawl everything
       },
     ],
   },
 
   // Custom transformation for the URLs in the sitemap
-  transform: async (url, { pathname, query }) => {
-    // Custom transformations based on the pathname or query
-    if (pathname === '/blog') {
-      return {
-        loc: `${url}?sort=latest`, // Adding query parameters to certain pages, e.g., blog page
-        priority: 0.8, // Custom priority
-        changefreq: 'weekly', // Custom change frequency for blog
-      };
-    }
+  transform: async (config, { loc }) => {
     return {
-      loc: url, // Default behavior
+      loc, // URL of the page
       priority: 0.7, // Default priority
       changefreq: 'daily', // Default change frequency
+      lastmod: null, // Explicitly remove lastmod (date field)
     };
   },
 
-  // Set up multiple languages if your website is multilingual (for SEO)
-  i18n: {
-    locales: ['en', 'fr', 'es'], // List of supported languages
-    defaultLocale: 'en', // Default language
-  },
-
-  // Sitemap options for dynamic routes (e.g., product pages)
-  dynamicRoutes: async () => {
-    // Generate dynamic routes, e.g., for blog posts or product pages
-    const dynamicPages = await getDynamicPagesFromDatabase(); // Example function to fetch dynamic URLs
-    return dynamicPages.map(page => `/products/${page.id}`); // Return dynamic paths based on data
+  // Include all pages in the sitemap
+  additionalPaths: async (config) => {
+    return [
+      { loc: '/' },
+      { loc: '/software' },
+      { loc: '/hardware' },
+      { loc: '/marketing' },
+      { loc: '/printing' },
+      { loc: '/contact' },
+      { loc: '/about' },
+      // Add additional static or dynamic paths as required
+    ];
   },
 
   // Sitemap output options

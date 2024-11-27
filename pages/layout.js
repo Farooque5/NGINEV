@@ -10,7 +10,7 @@ export default function Layout({
   description = 'NGINEV: Your trusted partner for custom software, hardware, marketing, and printing solutions. Empowering businesses worldwide.',
   keywords = 'software solutions, hardware solutions, marketing strategies, printing services, NGINEV, business solutions',
   image = '/images/nginev.png', // Default fallback image
-  url = 'https://www.nginev.com', // Default website URL
+  url = 'https://www.nginev.com/', // Default website URL
   author = 'NGINEV',
   robots = 'index, follow',
   twitterCard = 'summary_large_image',
@@ -18,9 +18,9 @@ export default function Layout({
   openGraphTitle = 'NGINEV - From Tech to Trends',
   openGraphDescription = 'NGINEV offers innovative software, hardware, marketing, and printing solutions to businesses globally.',
   openGraphImage = '/images/nginev.png',
-  openGraphUrl = 'https://www.nginev.com',
+  openGraphUrl = 'https://www.nginev.com/',
   additionalMeta = [],
-  canonicalUrl = 'https://www.nginev.com',
+  canonicalUrl = 'https://www.nginev.com/',
 }) {
   return (
     <>

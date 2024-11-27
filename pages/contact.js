@@ -30,7 +30,7 @@ export default function ContactPage() {
             "contact, NGINEV, collaboration, software, hardware, marketing, printing, business inquiries",
         },
       ]}
-      canonicalUrl="https://www.nginev.com"
+      canonicalUrl="https://www.nginev.com/hardware"
     >
 
       {/* Page Content */}

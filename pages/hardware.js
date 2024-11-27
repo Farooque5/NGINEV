@@ -106,7 +106,7 @@ export default function Hardware() {
             "hardware solutions, IT infrastructure, technology devices, custom hardware, enterprise support, NGINEV services",
         },
       ]}
-      canonicalUrl="https://www.nginev.com"
+      canonicalUrl="https://www.nginev.com/hardware"
     >
       {/* Navbar */}
       <Nav />

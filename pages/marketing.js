@@ -89,7 +89,7 @@ export default function Marketing() {
             "digital marketing, SEO strategies, branding, social media, advertising solutions, NGINEV marketing services",
         },
       ]}
-      canonicalUrl="https://www.nginev.com"
+      canonicalUrl="https://www.nginev.com/marketing"
     >
       {/* Navbar */}
       <Nav />

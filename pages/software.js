@@ -124,7 +124,7 @@ export default function Software() {
           content: "custom software, NGINEV, software solutions, web development, enterprise applications",
         },
       ]}
-      canonicalUrl="https://www.nginev.com"
+      canonicalUrl="https://www.nginev.com/software"
     >
       {/* Navbar */}
       <Nav />

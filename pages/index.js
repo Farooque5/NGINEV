@@ -113,7 +113,7 @@ const Home = () => {
           content: "business solutions, tech services, software, hardware, marketing, printing, NGINEV",
         },
       ]}
-      canonicalUrl="https://www.nginev.com"
+      canonicalUrl="https://www.nginev.com/"
     >
       {/* Page Components */}
       <Navbar />

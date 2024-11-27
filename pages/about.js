@@ -80,7 +80,7 @@ export default function AboutPage() {
             "about NGINEV, business innovation, technology solutions, software services, hardware support, marketing, printing",
         },
       ]}
-      canonicalUrl="https://www.nginev.com"
+      canonicalUrl="https://www.nginev.com/about"
     >
        
       {/* Page Content */}

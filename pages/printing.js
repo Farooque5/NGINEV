@@ -114,7 +114,7 @@ export default function Printing() {
             "custom printing, business branding, packaging solutions, promotional prints, marketing materials, label printing, NGINEV services",
         },
       ]}
-      canonicalUrl="https://www.nginev.com"
+      canonicalUrl="https://www.nginev.com/printing"
     >
 
       {/* Hero Section */}

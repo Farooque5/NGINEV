@@ -4,11 +4,12 @@ import Layout from "./layout";
 
 // Dynamically import other components for performance optimization
 const Navbar = dynamic(() => import("../components/navbar"));
-const HeroSection = dynamic(() => import("../components/heroSection"));
+// const HeroSection = dynamic(() => import("../components/heroSection"));
 const InfoSecContent = dynamic(() => import("../components/infoSecContent"));
 const CardSection = dynamic(() => import("../components/cardSection"));
 const Contact = dynamic(() => import("../components/contact"));
 const Footer = dynamic(() => import("../components/footer"));
+const HeroSection = dynamic(() => import("../components/newYearHeroSection"));
 
 // Define reusable data for SEO and component structure
 const softwareSolutionsData = [
@@ -79,17 +80,17 @@ const contactParagraph =
   "Your success is our priority. We're here to help bring your ideas to life. Have a question or ready to get started? Reach out, and let’s make something amazing happen together!";
 
 // Define HeroSection props
-const heroSectionProps = {
-  title: "NGINEV: Innovation Crafted for You",
-  description:
-    "At NGINEV, we turn technology into tools for your growth. Our custom software, hardware, design, and marketing solutions simplify and elevate your work. With us, you’re not just adopting tech—you’re gaining a partner dedicated to your success. Let’s bring your vision to life together.",
-  videoSources: [
-    { src: "/videos/world-1920.mp4", media: "(min-width: 1200px)" },
-    { src: "/videos/world-720.mp4", media: "(min-width: 768px)" },
-    { src: "/videos/world-565.mp4", media: "(max-width: 767px)" },
-  ],
-  imageSrc: "/images/world pic.png",
-};
+// const heroSectionProps = {
+//   title: "NGINEV: Innovation Crafted for You",
+//   description:
+//     "At NGINEV, we turn technology into tools for your growth. Our custom software, hardware, design, and marketing solutions simplify and elevate your work. With us, you’re not just adopting tech—you’re gaining a partner dedicated to your success. Let’s bring your vision to life together.",
+//   videoSources: [
+//     { src: "/videos/world-1920.mp4", media: "(min-width: 1200px)" },
+//     { src: "/videos/world-720.mp4", media: "(min-width: 768px)" },
+//     { src: "/videos/world-565.mp4", media: "(max-width: 767px)" },
+//   ],
+//   imageSrc: "/images/world pic.png",
+// };
 
 const Home = () => {
   return (
@@ -117,7 +118,8 @@ const Home = () => {
     >
       {/* Page Components */}
       <Navbar />
-      <HeroSection {...heroSectionProps} />
+      <HeroSection />
+      {/* <newYearHeroSection /> */}
 
       {/* Main Content Section */}
       <InfoSecContent sections={sections} />

@@ -1,6 +1,5 @@
 import React from "react";
 import { 
-  FaFacebookF, 
   FaTwitter, 
   FaInstagram, 
   FaLinkedinIn, 
@@ -35,13 +34,6 @@ const Footer = () => {
         <div className="flex flex-col items-center space-y-3" aria-label="Social Media and Contact Info">
           {/* Social Media Icons */}
           <div className="flex space-x-6" aria-label="Follow us on social media">
-            <a href="https://facebook.com/YourBusinessPage" 
-               aria-label="Visit our Facebook" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               className="text-gray-300 hover:text-red-600 transition duration-300">
-              <FaFacebookF size={18} />
-            </a>
             <a href="https://twitter.com/NGINEV144376" 
                aria-label="Visit our Twitter" 
                target="_blank" 

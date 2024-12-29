@@ -105,9 +105,9 @@ const heroSectionProps = {
 export default function Software() {
   return (
     <Layout
-      title="Software Solutions | NGINEV"
+      title="Devora | Software Solutions"
       description="Empower your business with NGINEV's cutting-edge software solutions tailored for growth."
-      keywords="software, custom software, web development, NGINEV software solutions"
+      keywords="Software Development Company, Custom Software Solutions, Web and Mobile App Development, Cloud-based Software Development, AI Software Solutions, AI Development Services, IT Support and Maintenance Services, Enterprise Resource Planning (ERP) Software, Software as a Service (SaaS) Solutions, Business Software Solutions, IT Solutions for SMEs, Software Consultancy Services, NGINEV Business Solutions, Business Solutions, Tech Solutions, Custom Software Development, Software Development Services, IT Hardware Solutions, Business Support Services, Professional Tech Services, Tech Services Dhanbad, IT Solutions for Businesses, Enterprise Software Solutions, Digital Transformation Services, Cloud Solutions for Businesses, Innovative Business Solutions, End-to-End Technology Solutions"
       image="/images/nginev.png"
       url="https://www.nginev.com/software"
       author="NGINEV"

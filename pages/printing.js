@@ -94,9 +94,9 @@ const heroSectionProps = {
 export default function Printing() {
   return (
     <Layout
-      title="Printing Services | NGINEV"
+      title="Printify | Printing Services"
       description="Discover NGINEV's premium printing services, offering customized designs, packaging, labels, and promotional materials to enhance your brand presence."
-      keywords="printing services, custom printing, packaging design, labels printing, promotional materials, marketing prints, business branding"
+      keywords="printing services, custom printing, packaging design, labels printing, promotional materials, marketing prints, business branding, Printing Solutions, Professional Printing Services, Commercial Printing Services, Custom Printing Solutions, High-quality Printing Services, Offset Printing Services, Digital Printing Services, Business Printing Services, Printing and Packaging Solutions, Printing for Marketing Materials, Custom Business Stationery Printing, Large Format Printing Services, Professional Brochure Printing, Business Card Printing Solutions, Corporate Printing Solutions, Global Business Solutions, Digital Innovation Solutions, Scalable Software Solutions, Business Automation Services, Customized Marketing Plans, Global IT Services, Enterprise Digital Transformation, Full-Service Printing Solutions"
       image="/images/nginev.png"
       url="https://www.nginev.com/printing"
       author="NGINEV"

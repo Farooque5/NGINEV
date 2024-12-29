@@ -86,9 +86,9 @@ const heroSectionProps = {
 export default function Hardware() {
   return (
     <Layout
-      title="Hardware Solutions | NGINEV"
+      title="Technium | Hardware Solutions"
       description="Discover NGINEV's hardware solutions, from IT infrastructure to custom devices and technical support, tailored to empower your business."
-      keywords="hardware solutions, IT infrastructure, custom hardware, technical support, enterprise technology, NGINEV hardware services"
+      keywords="Hardware Services, IT Hardware Solutions, Computer Hardware Services, IT Infrastructure Solutions, Hardware Maintenance Services, Networking Hardware Solutions, IT Equipment Support, Hardware Installation Services, Custom Hardware Solutions, Hardware Consultancy Services, Data Center Solutions, Business Solutions, Tech Solutions, Custom Software Development, Software Development Services, IT Hardware Solutions, Business Support Services, Professional Tech Services, Tech Services Dhanbad, IT Solutions for Businesses, Enterprise Software Solutions, Digital Transformation Services, Cloud Solutions for Businesses, Innovative Business Solutions, End-to-End Technology Solutions"
       image="/images/nginev.png"
       url="https://www.nginev.com/hardware"
       author="NGINEV"

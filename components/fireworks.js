@@ -37,7 +37,7 @@ const launchFireworks = () => {
 // Trigger the fireworks 1 second after the page loads
 if (typeof window !== "undefined") {
   window.addEventListener("load", () => {
-    setTimeout(launchFireworks, 1000); // Delay by 1 second
+    setTimeout(launchFireworks, 2000); // Delay by 1 second
   });
 }
 

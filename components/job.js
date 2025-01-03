@@ -1,13 +1,16 @@
-import { useState } from 'react';
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const JoinUs = ({ title, description }) => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    projectLink: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    projectLink: "",
+    message: "",
   });
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -15,8 +18,36 @@ const JoinUs = ({ title, description }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', phone: '', projectLink: '', message: '' });
+
+    // Define EmailJS template parameters
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      from_phone: formData.phone,
+      project_link: formData.projectLink,
+      message: formData.message,
+      to_name: "Farooque", // Change this to your desired recipient name
+    };
+
+    // Send email via EmailJS
+    emailjs
+      .send(
+        "service_gbfd598", // Replace with your EmailJS service ID
+        "template_3rr79qm", // Replace with your EmailJS template ID
+        templateParams,
+        "35aXHuFaOg3N9ACYM" // Replace with your EmailJS user ID
+      )
+      .then(
+        (response) => {
+          console.log("Email sent successfully:", response.status, response.text);
+          setIsSubmitted(true);
+          setFormData({ name: "", email: "", phone: "", projectLink: "", message: "" }); // Reset form
+        },
+        (error) => {
+          console.error("Error sending email:", error.text);
+          alert("Failed to send message. Please try again later.");
+        }
+      );
   };
 
   return (
@@ -48,7 +79,7 @@ const JoinUs = ({ title, description }) => {
               value={formData.name}
               onChange={handleChange}
               placeholder="Enter your name"
-              className="w-full p-3 rounded-md bg-zinc-800 text-white placeholder-gray-500 focus:ring-2 focus:ring-[rgba(220,38,38,0.6)] outline-none transition duration-300 ease-in-out"
+              className="w-full p-3 rounded-md bg-zinc-800 text-white placeholder-gray-500 focus:ring-2 focus:ring-green-600 outline-none transition duration-300 ease-in-out"
               required
               aria-labelledby="name-label"
             />
@@ -70,7 +101,7 @@ const JoinUs = ({ title, description }) => {
               value={formData.email}
               onChange={handleChange}
               placeholder="Enter your email"
-              className="w-full p-3 rounded-md bg-zinc-800 text-white placeholder-gray-500 focus:ring-2 focus:ring-[rgba(220,38,38,0.6)] outline-none transition duration-300 ease-in-out"
+              className="w-full p-3 rounded-md bg-zinc-800 text-white placeholder-gray-500 focus:ring-2 focus:ring-green-600 outline-none transition duration-300 ease-in-out"
               required
               aria-labelledby="email-label"
             />
@@ -92,7 +123,7 @@ const JoinUs = ({ title, description }) => {
               value={formData.phone}
               onChange={handleChange}
               placeholder="Enter your phone number"
-              className="w-full p-3 rounded-md bg-zinc-800 text-white placeholder-gray-500 focus:ring-2 focus:ring-[rgba(220,38,38,0.6)] outline-none transition duration-300 ease-in-out"
+              className="w-full p-3 rounded-md bg-zinc-800 text-white placeholder-gray-500 focus:ring-2 focus:ring-green-600 outline-none transition duration-300 ease-in-out"
               required
               aria-labelledby="phone-label"
             />
@@ -114,7 +145,7 @@ const JoinUs = ({ title, description }) => {
               value={formData.projectLink}
               onChange={handleChange}
               placeholder="Enter the link to your project/portfolio"
-              className="w-full p-3 rounded-md bg-zinc-800 text-white placeholder-gray-500 focus:ring-2 focus:ring-[rgba(220,38,38,0.6)] outline-none transition duration-300 ease-in-out"
+              className="w-full p-3 rounded-md bg-zinc-800 text-white placeholder-gray-500 focus:ring-2 focus:ring-green-600outline-none transition duration-300 ease-in-out"
               required
               aria-labelledby="project-link-label"
             />
@@ -136,7 +167,7 @@ const JoinUs = ({ title, description }) => {
               onChange={handleChange}
               placeholder="Write your message here"
               rows="5"
-              className="w-full p-3 rounded-md bg-zinc-800 text-white placeholder-gray-500 focus:ring-2 focus:ring-[rgba(220,38,38,0.6)] outline-none transition duration-300 ease-in-out resize-none"
+              className="w-full p-3 rounded-md bg-zinc-800 text-white placeholder-gray-500 focus:ring-2 focus:ring-green-600 outline-none transition duration-300 ease-in-out resize-none"
               required
               aria-labelledby="message-label"
             />
@@ -144,12 +175,18 @@ const JoinUs = ({ title, description }) => {
 
           <button
             type="submit"
-            className="relative w-full p-3 mt-4 font-semibold text-white rounded-md border border-red-600 bg-zinc-950 overflow-hidden group transition duration-300 ease-in-out"
+            className="relative w-full p-3 mt-4 font-semibold text-white rounded-md border border-gray-600 bg-zinc-950 overflow-hidden group transition duration-300 ease-in-out"
             aria-label="Submit the form"
           >
-            <span className="relative z-10 text-gray-200 group-hover:text-red-600">Submit</span>
+            <span className="relative z-10 text-gray-200 group-hover:text-green-600">Submit</span>
             <span className="absolute inset-0 bg-black bg-opacity-75 rounded-md transform scale-y-0 group-hover:scale-y-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out"></span>
           </button>
+
+          {isSubmitted && (
+            <div className="mt-4 text-center text-green-500">
+              Your message has been sent successfully!
+            </div>
+          )}
         </form>
       </div>
     </section>
